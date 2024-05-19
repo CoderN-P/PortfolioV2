@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "python3 -m main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoderN-P/Portfolio.git"
+  },
+  "author": "Neel Parpia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CoderN-P/Portfolio/issues"
+  },
+  "homepage": "https://github.com/CoderN-P/Portfolio#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}

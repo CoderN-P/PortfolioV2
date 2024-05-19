@@ -1,0 +1,20 @@
+<html class="" lang="en">
+<head>
+    <title>Neel Parpia</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/tailwind.css">
+    <script src="/static/js/layout.js"></script>
+
+</head>
+<body class="dark:text-white text-black dark:bg-black bg-gray-100 h-full w-full">
+    <header class=" border-b justify-between items-center dark:border-gray-800 border-gray-200 bg-gray-100 dark:bg-gray-950 flex flex-row h-20 p-4 w-full ">
+        <h1 class="font-bold text-2xl">Neel Parpia</h1>
+        <div class="flex space-x-3 flex-row">
+            <a id="home" href="/">Home</a>
+            <a id="projects" href="/">Projects</a>
+        </div>
+
+    </header>
+    {% block content %}{% endblock %}
+</body>
+</html>

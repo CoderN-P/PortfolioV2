@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="w-full h-full" >
+    <div class="flex items-center relative justify-center w-full h-[calc(100%-80px)]">
+        <div class="flex flex-col">
+            <h1 class="text-8xl text-center text-black dark:text-white font-bold">Hi, I'm</h1>
+            <h1 class="text-7xl md:text-8xl lg:text-9xl text-center font-bold bg-gradient-to-r from-blue-500 to-green-500 text-transparent bg-clip-text">Neel Parpia</h1>
+        </div>
+        <div id="ai" class="top-16  font-bold text-transparent right-16 items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 -rotate-12 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
+        <p class="bg-gradient-to-r from-blue-500 to-orange-500 bg-clip-text">Artificial Intelligence</p>
+    </div>
+        <div id="aiBlur" style="" class=" absolute -rotate-12 top-16 right-16 bg-blue-500 z-0 rounded-xl blur-lg">
+        </div>
+        <div id="webdev" class="top-36  font-bold text-transparent left-20 items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 rotate-6 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
+            <p class="bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text">Web Development</p>
+        </div>
+        <div id="webdevBlur" style="" class=" absolute rotate-6 top-36 left-20 bg-teal-500 z-0 rounded-xl blur-lg">
+        </div>
+        <div id="physics" class="bottom-28 font-bold text-transparent right-20 items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 rotate-6 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
+            <p class="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text">Physics</p>
+        </div>
+        <div id="physicsBlur" style="bottom:120px; right:85px;" class=" absolute rotate-6 bottom-28 right-20 bg-red-500 z-0 rounded-xl blur-lg">
+        </div>
+
+        <div id="robotics" class="bottom-14 font-bold text-transparent left-24 items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 rotate-6 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
+            <p class="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text">Robotics</p>
+        </div>
+        <div id="roboticsBlur" style="" class=" absolute rotate-6 bottom-14 left-24 bg-purple-500 z-0 rounded-xl blur-lg">
+        </div>
+        <div id="app" style="left:450px;" class=" font-bold text-transparent items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 bottom-16 -rotate-3 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
+            <p class="bg-gradient-to-r from-yellow-500 to-purple-500 bg-clip-text">App Development</p>
+        </div>
+        <div id="appBlur" style="left:460px;" class=" absolute bottom-16 -rotate-3 bg-yellow-500 z-0 rounded-xl blur-lg">
+        </div>
+
+    </div>
+    <div class="flex items-center justify-center bg-gradient-to-b from-gray-100 to-blue-500 w-full h-screen">
+
+</div>
+{% endblock %}
