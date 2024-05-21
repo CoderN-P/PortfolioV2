@@ -1,29 +1,67 @@
 
+let selected = '';
+let icon = '';
+const blurs = ['physics', 'webdev', 'ai', 'robotics', 'app', 'engineering'];
+
+const skillToIcon = {
+    'python': '/static/images/python.svg',
+    'java': 'java.svg',
+    'c++': 'c-plusplus.svg',
+}
 $(document).ready(function () {
     const pathname = $(location).attr("pathname");
 
     if (pathname === "/") {
+
         $('#home').removeClass('font-bold');
         $('#home').addClass('text-blue-500 font-bold');
-        const physics = $('#physics');
-        const webdev = $('#webdev');
-        const ai = $('#ai');
-        const robotics = $('#robotics');
-        const app = $('#app');
-
-        $('#appBlur').width(app.width()+20);
-        $('#appBlur').height(app.height()+20);
-
-        $('#roboticsBlur').width(robotics.width()+20);
-        $('#roboticsBlur').height(robotics.height()+20);
-        $('#aiBlur').width(ai.width()+20);
-        $('#aiBlur').height(ai.height()+20);
-
-        $('#physicsBlur').width(physics.width()+20);
-        $('#physicsBlur').height(physics.height()+20);
-        $('#webdevBlur').width(webdev.width()+20);
-        $('#webdevBlur').height(webdev.height()+20);
+        showBlurs();
+        $('#skillsLink').click(() => scrollToId('skills'));
     }
 
 
 });
+
+function changeSelected(id) {
+    console.log(id);
+    if (selected) {
+        $(`#${selected}`).removeClass('dark:border-gray-600 border-2');
+        $(`#${selected}`).addClass('dark:border-gray-800');
+        if (selected === id) {
+            selected = '';
+            icon = '';
+            $('#selectedImage').attr('src', '');
+            $('#selectedImage').addClass('hidden');
+            $(`#selectedText`).text('No icon selected');
+            return;
+        }
+    }
+    $(`#${id}`).removeClass('dark:border-gray-800');
+    $(`#${id}`).addClass('dark:border-gray-600 border-2');
+    $(`#selectedText`).text(id);
+    selected = id;
+    icon = skillToIcon[id];
+    $('#selectedImage').attr('src', icon);
+    $('#selectedImage').removeClass('hidden');
+
+}
+
+
+function scrollToId(id) {
+    console.log(id);
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: 'smooth' });
+}
+
+function showBlurs() {
+    blurs.forEach(blur => {
+        let blurElement = $(`#${blur}`);
+        $(`#${blur}Blur`).width(blurElement.width()+20);
+        $(`#${blur}Blur`).height(blurElement.height()+20);
+        $(`#${blur}Blur`).offset({top: blurElement.offset().top, left: blurElement.offset().left});
+
+    });
+
+}
+
+
