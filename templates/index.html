@@ -1,15 +1,15 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="w-full h-full" >
-    <div id="container" class="flex dark:bg-gray-950 bg-gray-100 items-center relative justify-center w-full h-[calc(100%-80px)]">
+<div class="w-full h-full mt-20" >
+    <div id="container"  class="flex h-screen dark:bg-gray-950 bg-gray-100 items-center relative justify-center w-full ">
         <div id="name" class="flex flex-col">
             <h1  class="text-5xl md:text-7xl lg:text-8xl text-center text-black dark:text-white font-bold">Hi, I'm</h1>
             <h1  class="text-6xl md:text-8xl lg:text-9xl text-center font-bold bg-gradient-to-r from-blue-500 to-green-500 text-transparent bg-clip-text">Neel Parpia</h1>
         </div>
         <div id="ai" class="top-24 right-12 font-bold text-transparent items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 -rotate-12 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
         <p class="bg-gradient-to-r from-blue-500 to-orange-500 bg-clip-text">Artificial Intelligence</p>
-    </div>
+        </div>
         <div id="aiBlur" style="" class="transition-all absolute -rotate-12 top-24 right-16 bg-blue-500 z-0 rounded-xl blur-lg">
         </div>
         <div id="webdev" class="top-36  font-bold text-transparent left-20 items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 rotate-6 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
@@ -39,17 +39,20 @@
         </div>
 
     </div>
-    <div class="w-screen h-1/4 bg-gradient-to-b from-gray-100 to-white dark:from-gray-950 dark:to-black"></div>
-    <div id="skills" class="flex  p-8 group flex-col dark:bg-black bg-white w-screen h-screen">
-        <div class="flex flex-row w-screen justify-between mb-4">
-            <h1 class="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-orange-500">My Skills</h1>
-            <div class="relative w-52 h-20">
-                <div class="absolute z-10 rounded-xl p-4 flex items-center w-52 h-20 dark:bg-black/50 backdrop-blur border dark:border-gray-800">
-                    <img id="selectedImage" class="w-8 h-8 mr-4"/>
-                    <p id="selectedText" class="flex-grow capitalize font-bold dark:text-gray-600 text-lg">Select an Icon</p>
+    <div class="w-screen h-1/4  bg-gradient-to-b from-gray-100 to-white dark:from-gray-950 dark:to-black"></div>
+    <div id="skills" class="h-[calc(100%-80px)] flex h-full overflow-y-visible p-8 group flex-col dark:bg-black bg-white mb-8 w-screen">
+        <div class="flex flex-row w-full pr-4 h-20 justify-between items-center mb-4">
+            <h1 class="text-7xl font-bold h-full text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-orange-500">My Skills</h1>
+            <div id="selectedContainer" class="relative w-48 h-14">
+                <div id="selectedDiv" class="absolute z-20 w-48 h-14 rounded-xl p-4 flex items-center dark:bg-black/50 backdrop-blur border dark:border-gray-800">
+                    <img id="selectedImage" class="hidden w-8 h-8 mr-4"/>
+                    <p id="selectedText" class="flex-grow capitalize font-bold dark:text-white text-lg">Select an Icon</p>
                 </div>
-                <div id="selectedBlur" class="z-0 absolute w-52 h-20 bg-yellow-500 blur-lg"></div>
-                </div>
+
+                <div id="selectedBlur" class="absolute z-0 w-44 left-1 hidden h-14 bg-yellow-500 blur-lg"></div>
+            </div>
+
+
         </div>
         <div class="flex flex-col md:flex-row">
             <div class="w-full md:w-1/2 md:mr-4">
@@ -63,20 +66,20 @@
                 </div>
 
                 <div class="relative w-14 h-14">
-                    <div class="absolute p-2 rounded-xl backdrop-blur w-14 h-14 dark:bg-black/50 bg-white/50 border dark:border-gray-800 border-gray-200 z-10">
+                    <div id="typescript" onclick="changeSelected('typescript');" class="absolute p-2 rounded-xl backdrop-blur w-14 h-14 dark:bg-black/50 bg-white/50 border dark:border-gray-800 border-gray-200 z-10">
                         <img src="/static/images/typescript-icon.svg" style="width:40px;height:40px;" class="rounded-md h-full w-full object-cover"/>
                     </div>
                     <div  class="z-0 rounded-xl w-11 h-11 absolute top-1.5 left-1 bg-blue-500 blur-lg"></div>
                 </div>
 
                 <div class="relative w-14 h-14">
-                    <div class="absolute p-2 rounded-xl backdrop-blur h-14 w-14 dark:bg-black/50 bg-white/50 border dark:border-gray-800 border-gray-200 z-10">
+                    <div id="java" onclick="changeSelected('java');" class="absolute p-2 rounded-xl backdrop-blur h-14 w-14 dark:bg-black/50 bg-white/50 border dark:border-gray-800 border-gray-200 z-10">
                         <img src="/static/images/java.svg" style="width:40px;height:40px;" class="h-full w-full object-cover"/>
                     </div>
                     <div  class="z-0 rounded-xl w-11 h-11 absolute top-1.5 left-1 bg-orange-500 blur-lg"></div>
                 </div>
                 <div class="relative w-14 h-14">
-                    <div class="absolute p-2 rounded-xl backdrop-blur w-14 h-14 dark:bg-black/50 bg-white/50 border dark:border-gray-800 border-gray-200 z-10">
+                    <div id="c++" onclick="changeSelected('c++');" class="absolute p-2 rounded-xl backdrop-blur w-14 h-14 dark:bg-black/50 bg-white/50 border dark:border-gray-800 border-gray-200 z-10">
                         <img src="/static/images/c-plusplus.svg" style="width:40px;height:40px;" class="h-full w-full object-cover"/>
                     </div>
                     <div  class="z-0 rounded-xl w-11 h-11 absolute top-1.5 left-1 bg-blue-500 blur-lg"></div>
@@ -185,6 +188,17 @@
                 </div>
                 <div  class="z-0 rounded-xl w-11 h-11 absolute top-1.5 left-1  bg-orange-500 blur-lg"></div>
             </div>
+        </div>
+    </div>
+
+    <div class="w-screen h-screen p-8 flex flex-col">
+        <h1 class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-purple-500 text-start">My Projects</h1>
+        <div class="flex flex-row mt-8">
+            <div class="relative w-96 flex ">
+                <img src="/static/images/stellar.png" class="absolute  rounded-xl w-96 z-20 object-cover"/>
+                <div style="width:442px;" class="blur-lg w-96 h-full bg-gradient-to-r from-blue-500 to-purple-500 absolute z-0"></div>
+            </div>
+
         </div>
     </div>
 

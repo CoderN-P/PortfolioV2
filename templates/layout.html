@@ -2,21 +2,21 @@
 <head>
     <title>Neel Parpia</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" type="text/css" href="/static/css/globals.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/tailwind.css">
     <script src="/static/js/layout.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 </head>
-<body class="dark:text-white relative text-black dark:bg-black bg-gray-100 h-full w-screen">
-    <header class=" border-b justify-between items-center z-30 dark:border-gray-800 border-gray-200 bg-white/50 backdrop-blur dark:bg-black/50 sticky top-0 flex flex-row h-20 p-4 w-full ">
+<body class="dark:text-white text-black dark:bg-black bg-gray-100 relative h-full w-screen">
+<div style="position:fixed;" class="z-30 h-20 w-full top-0">
+    <div class="border-b justify-between items-center dark:border-gray-800 border-gray-200 bg-white/50 backdrop-blur dark:bg-black/50 flex flex-row h-20 p-4 w-full ">
         <h1 class="font-bold text-2xl">Neel Parpia</h1>
         <div class="flex space-x-3 flex-row">
             <a id="home" href="/">Home</a>
             <button id="skillsLink">Skills</button>
         </div>
-
-    </header>
+    </div>
+</div>
     {% block content %}{% endblock %}
 </body>
 </html>

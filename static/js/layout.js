@@ -5,8 +5,9 @@ const blurs = ['physics', 'webdev', 'ai', 'robotics', 'app', 'engineering'];
 
 const skillToIcon = {
     'python': '/static/images/python.svg',
-    'java': 'java.svg',
-    'c++': 'c-plusplus.svg',
+    'typescript': '/static/images/typescript-icon.svg',
+    'java': '/static/images/java.svg',
+    'c++': '/static/images/c-plusplus.svg',
 }
 $(document).ready(function () {
     const pathname = $(location).attr("pathname");
@@ -15,6 +16,7 @@ $(document).ready(function () {
 
         $('#home').removeClass('font-bold');
         $('#home').addClass('text-blue-500 font-bold');
+
         showBlurs();
         $('#skillsLink').click(() => scrollToId('skills'));
     }
@@ -25,8 +27,8 @@ $(document).ready(function () {
 function changeSelected(id) {
     console.log(id);
     if (selected) {
-        $(`#${selected}`).removeClass('dark:border-gray-600 border-2');
-        $(`#${selected}`).addClass('dark:border-gray-800');
+        $(`#${selected}`).removeClass('brightness-150');
+
         if (selected === id) {
             selected = '';
             icon = '';
@@ -36,8 +38,8 @@ function changeSelected(id) {
             return;
         }
     }
-    $(`#${id}`).removeClass('dark:border-gray-800');
-    $(`#${id}`).addClass('dark:border-gray-600 border-2');
+
+    $(`#${id}`).addClass('brightness-150');
     $(`#selectedText`).text(id);
     selected = id;
     icon = skillToIcon[id];
