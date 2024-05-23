@@ -1,26 +1,50 @@
 <html class="" lang="en">
 <head>
+
+    <meta charset="utf-8" />
     <title>Neel Parpia</title>
+    <meta name="title" content="Neel Parpia" />
+    <meta name="description" content="Neel Parpia, high school developer interested in AI, Web Development, Robotics, and more." />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="author" content="W3cubTools" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="renderer" content="webkit" />
+
+
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://neelparpia.dev"/>
+    <meta property="og:title" content="Neel Parpia"/>
+    <meta property="og:description" content="Neel Parpia, high school developer interested in AI, Web Development, Robotics, and more."/>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/static/css/tailwind.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/static/js/layout.js"></script>
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta property="og:image" content="/static/images/codern_pfp.gif"/>
 
 </head>
 
 <body class="dark:text-white text-black dark:bg-black bg-gray-100 relative h-full w-screen">
-<div style="position:fixed;" id="nav" class="z-30 h-20 w-full top-0">
-    <div class="border-b justify-between items-center dark:border-gray-800 border-gray-200 bg-white/50 backdrop-blur dark:bg-black/50 flex flex-row h-20 p-4 w-full ">
-        <h1 class="font-bold text-2xl">Neel Parpia</h1>
-        <div class="flex space-x-3 flex-row text-transparent font-bold">
-            <button id="skillsLink" class="bg-clip-text bg-gradient-to-r from-purple-500 to-orange-500">Skills</button>
-            <button id="projectsLink" class="bg-clip-text bg-gradient-to-r from-teal-500 to-blue-500">Projects</button>
+    <div style="position:fixed;" id="nav" class="z-30 h-20 w-full top-0">
+        <div class="border-b justify-between items-center dark:border-gray-800 border-gray-200 bg-white/50 backdrop-blur dark:bg-black/50 flex flex-row h-20 p-4 w-full ">
+           <div class="flex flex-row">
+               <img src="/static/images/codern_pfp.gif" class="h-10 w-10 rounded-full mr-4">
+                <h1 class="font-bold mt-1 text-2xl">Neel Parpia</h1>
+           </div >
+            <div class="flex flex-row">
+                <img src="/static/images/icons8-github.svg" class="-gray-400 h-8 w-8">
+            </div>
+            <div class="flex space-x-3 flex-row text-transparent font-bold">
+                <button id="skillsLink" class="bg-clip-text bg-gradient-to-r from-purple-500 to-orange-500">Skills</button>
+                <button id="projectsLink" class="bg-clip-text bg-gradient-to-r from-teal-500 to-blue-500">Projects</button>
+            </div>
         </div>
     </div>
-</div>
-    {% block content %}{% endblock %}
+    {% block content %}
+    {% endblock %}
+
 </body>
 <script>
     $(document).ready(function () {
