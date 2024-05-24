@@ -1,4 +1,3 @@
-
 let selected = '';
 let icon = '';
 
@@ -35,10 +34,7 @@ const skills = {
     'ML/AI': [
         ['tensorflow', 'bg-orange-500'],
         ['numpy', 'bg-blue-500'],
-        ['pandas', 'bg-gray-500'],
-        ['scikit-learn', 'bg-yellow-500'],
-        ['keras', 'bg-red-500'],
-        ['opencv', 'bg-green-500'],
+        ['pandas', 'bg-yellow-500'],
     ],
     'Other': [
         ['qt', 'bg-green-500'],
@@ -140,9 +136,11 @@ $(document).ready(function () {
         addSkills();
         addProjects();
         showBlurs();
+        console.log($('#Stellar').height());
+
         $('#skillsLink').click(() => scrollToId('skills'));
         $('#projectsLink').click(() => scrollToId('projects'));
-
+        window.addEventListener('resize', showBlurs);
     }
 
 
@@ -156,7 +154,7 @@ function addSkills() {
 
         skillGroup.map((skill) => {
             const skillHTML = `
-                <div class="hover:scale-110 transition-all relative w-14 h-14">
+                <div class="skill transition transform duration-3000 hover:scale-110 w-14 h-14">
                         <div id="${skill[0]}" onclick="changeSelected('${skill[0]}');" class="absolute p-2 rounded-xl backdrop-blur h-14 w-14 dark:bg-black/50 bg-white/50 border dark:border-gray-800 border-gray-200 z-10">
                             <img src="${skillToIcon[skill[0]]}"  class=" w-10 h-10"/>
                         </div>
@@ -199,11 +197,17 @@ function scrollToId(id) {
 
 function addProjects(){
     projects.map((project) => {
+        var img = $('<img>', {
+            src:  `/static/images/${project.name}.png`,
+            alt: project.name,
+            class: "w-full rounded-xl z-20 object-cover",
+            id: project.name,
+        });
         let projectHTML = `
             <div class="flex flex-col mt-8 w-full mb-16 gap-6 relative">
                 <h1 style="width: fit-content;" class="text-6xl text-start font-bold min-h-20 text-transparent bg-clip-text bg-gradient-to-r ${project.colors}">${project.name}</h1>
-                <h1 class="text-3xl font-bold dark:text-gray-400">${project.shortDescription}</h1>
-                <img data-aos="fade-out" id="${project.name}" src="/static/images/${project.name}.png" class="w-full rounded-xl z-20 object-cover"/>
+                <h1 id="${project.name}Title" class="text-3xl font-bold dark:text-gray-400">${project.shortDescription}</h1>
+                
                 <div data-aos="fade-out" id="${project.name}Blur" class="blur-lg w-full bg-gradient-to-r ${project.colors} absolute z-0"></div>
                 
                 <div id="${project.name}Desc" class="flex flex-col gap-6 rounded-xl p-4 mt-8 border dark:border-gray-800 dark:bg-gray-950">
@@ -223,7 +227,7 @@ function addProjects(){
             </div>
             <div class="flex gap-4">
             ${project.github ?
-                `<button onClick="window.location.href='${project.github}';"
+            `<button onClick="window.location.href='${project.github}';"
                         class="bg-gradient-to-r transition-all  hover:opacity-80 text-center inline-block  from-red-500 to-orange-500 w-auto font-bold rounded-xl p-4">
                     Github 
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline-block ml-2 size-6 stroke-2 stroke-white">
@@ -247,6 +251,14 @@ function addProjects(){
                </div>
             `;
         $('#projects').append(projectHTML);
+        $(`[id='${project.name}Title']`).after(img);
+        img.on('load', () => {
+            const blurElement = $(`[id='${project.name}Blur']`);
+            blurElement.width(img.width());
+            blurElement.height(img.height());
+            blurElement.offset({top: img.offset().top, left: img.offset().left});
+        });
+
     })
 
 }
@@ -256,7 +268,7 @@ function showBlurs() {
         let el = $(`[id='${blur}']`);
         let offset = 20;
         if (['Stellar', 'Pycolor', 'Research Tool', 'NextChat', 'Curve Path Simulator', 'Country Bot'].includes(blur)){
-            offset = 10;
+            offset = 0;
         }
         const blurElement = $(`[id='${blur}Blur']`);
         blurElement.width(el.width()+offset);

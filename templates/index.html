@@ -1,48 +1,48 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="w-full h-full mt-20" >
+<div class="w-full min-h-full mt-20" >
     <div id="container"  class="flex h-[calc(100%-80px)] dark:bg-gray-950 bg-gray-100 items-center relative justify-center w-full ">
         <div id="name" class="flex flex-col">
-            <h1  class="text-5xl md:text-7xl lg:text-8xl text-center text-black dark:text-white font-bold">Hi, I'm</h1>
-            <h1  class="text-6xl md:text-8xl lg:text-9xl text-center font-bold bg-gradient-to-r from-blue-500 to-green-500 text-transparent bg-clip-text">Neel Parpia</h1>
+            <h1  class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-center text-black dark:text-white font-bold">Hi, I'm</h1>
+            <h1  class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl text-center font-bold bg-gradient-to-r from-blue-500 to-green-500 text-transparent bg-clip-text">Neel Parpia</h1>
         </div>
-        <div id="ai" class="hover:scale-110 transition-all top-24 right-12 font-bold text-transparent items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 -rotate-12 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
-        <p class="bg-gradient-to-r from-blue-500 to-orange-500 bg-clip-text">Artificial Intelligence</p>
+        <div id="ai" class="hidden sm:block  hover:scale-110 top-20 sm:top-24 right-12 font-bold text-transparent items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 -rotate-12 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
+        <p class="bg-gradient-to-r from-blue-500 to-orange-500 text-xs sm:text-sm md:text-base bg-clip-text">Artificial Intelligence</p>
         </div>
-        <div id="aiBlur" style="" class="transition-all hover:scale-110 absolute -rotate-12 top-24 right-16 bg-blue-500 z-0 rounded-xl blur-lg">
+        <div id="aiBlur" style="" class="hidden sm:block  hover:scale-110 absolute -rotate-12 top-24 right-16 bg-blue-500 z-0 rounded-xl blur-lg">
         </div>
-        <div id="webdev" class="top-36  font-bold text-transparent left-20 items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 rotate-6 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
-            <p class="bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text">Web Development</p>
+        <div id="webdev" class="sm:top-36 hidden sm:block  top-40 font-bold text-transparent left-20 items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 rotate-6 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
+            <p class="bg-gradient-to-r from-blue-500 to-teal-500 text-xs sm:text-sm md:text-base bg-clip-text">Web Development</p>
         </div>
-        <div id="webdevBlur" style="" class=" absolute rotate-6 top-36 left-20 bg-teal-500 z-0 rounded-xl blur-lg">
+        <div id="webdevBlur" style="" class="hidden sm:block absolute rotate-6 top-36 left-20 bg-teal-500 z-0 rounded-xl blur-lg">
         </div>
-        <div id="physics" class=" bottom-28 font-bold text-transparent right-20 items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 rotate-6 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
-            <p class="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text">Physics</p>
+        <div id="physics" class=" hidden sm:block  bottom-32  md:bottom-28 font-bold text-transparent right-10 md:right-20 items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 rotate-6 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
+            <p class="bg-gradient-to-r text-xs sm:text-sm md:text-base from-red-500 to-orange-500 bg-clip-text">Physics</p>
         </div>
-        <div id="physicsBlur" style="bottom:120px; right:85px;" class=" absolute rotate-6 bottom-28 right-20 bg-red-500 z-0 rounded-xl blur-lg">
+        <div id="physicsBlur" style="bottom:120px; right:85px;" class="hidden sm:block  absolute rotate-6 bottom-28 right-20 bg-red-500 z-0 rounded-xl blur-lg">
         </div>
-        <div id="engineering" class="top-16 font-bold text-transparent left-96 items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 -rotate-6 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
-            <p class="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text">Engineering</p>
+        <div id="engineering" class="hidden sm:block  top-8 left-12 sm:top-16 font-bold text-transparent sm:left-80 lg:left-96 items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 -rotate-6 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
+            <p class="bg-gradient-to-r text-xs sm:text-sm md:text-base from-red-500 to-orange-500 bg-clip-text">Engineering</p>
         </div>
-        <div id="engineeringBlur" style="" class=" absolute -rotate-6 top-16 -left-96 bg-orange-500 z-0 rounded-xl blur-lg">
+        <div id="engineeringBlur" style="" class=" hidden sm:block  absolute -rotate-6 top-16 -left-96 bg-orange-500 z-0 rounded-xl blur-lg">
         </div>
-        <div id="robotics" class=" bottom-14 font-bold text-transparent left-24 items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 rotate-6 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
-            <p class="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text">Robotics</p>
+        <div id="robotics" class=" hidden sm:block sm:bottom-14 font-bold text-transparent sm:left-24 items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 rotate-6 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
+            <p class="text-xs sm:text-sm md:text-base bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text">Robotics</p>
         </div>
-        <div id="roboticsBlur" style="" class=" absolute rotate-6 bottom-14 left-24 bg-purple-500 z-0 rounded-xl blur-lg">
+        <div id="roboticsBlur" style="" class=" hidden sm:block absolute rotate-6 bottom-14 left-24 bg-purple-500 z-0 rounded-xl blur-lg">
         </div>
-        <div id="app"  class="font-bold text-transparent items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 bottom-16 -rotate-3 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
-            <p class="bg-gradient-to-r from-yellow-500 to-purple-500 bg-clip-text">App Development</p>
+        <div id="app"  class="hidden sm:block  font-bold text-transparent items-center backdrop-blur z-10 dark:bg-black/50 bg-white/50 bottom-12 sm:bottom-16 -rotate-3 p-4 absolute border dark:border-gray-800 border-gray-200 rounded-xl">
+            <p class="bg-gradient-to-r text-xs sm:text-sm md:text-base from-yellow-500 to-purple-500 bg-clip-text">App Development</p>
         </div>
-        <div id="appBlur" class=" absolute -rotate-3 bg-yellow-500 z-0 rounded-xl blur-lg">
+        <div id="appBlur" class=" hidden sm:block  absolute -rotate-3 bg-yellow-500 z-0 rounded-xl blur-lg">
         </div>
 
     </div>
     <div class="w-screen h-1/4  bg-gradient-to-b from-gray-100 to-white dark:from-gray-950 dark:to-black"></div>
-    <div id="skills" class="h-full flex overflow-y-visible p-8 md:p-16 group flex-col dark:bg-black bg-white mb-8 w-screen">
-        <div class="flex flex-row  w-full pr-4 h-20 justify-between items-center mb-4">
-            <h1 class="text-7xl font-bold h-full text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-orange-500">My Skills</h1>
+    <div id="skills" class="min-h-screen flex overflow-y-visible p-8 md:p-16 group flex-col dark:bg-black bg-white mb-8 w-screen">
+        <div class="flex flex-row  w-full pr-4 justify-between items-center mb-4">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold min-h-20 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-orange-500">My Skills</h1>
             <div id="selectedContainer" class="relative w-48 h-14">
                 <div id="selectedDiv" class="absolute z-20 w-48 h-14 rounded-xl p-4 flex items-center dark:bg-black/50 backdrop-blur border dark:border-gray-800">
                     <img id="selectedImage" class="hidden w-8 h-8 mr-4"/>
@@ -79,12 +79,10 @@
         </div>
     </div>
 
-    <div id="projects" class="w-screen h-full overflow-y-visible p-8 md:p-16 flex flex-col">
+    <div id="projects" class="w-screen overflow-y-visible p-8 md:p-16 flex flex-col">
         <h1 style="width:fit-content;" class="inline-block text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r min-h-24 from-teal-500 to-purple-500 text-start">My Projects</h1>
     </div>
-    <div class="h-20  z-50 mt-6 w-screen bg-blue-500">
-        <p>Footer</p>
-    </div>
+
 
 
 
