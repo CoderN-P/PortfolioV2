@@ -35,6 +35,7 @@ const skills = {
         ['tensorflow', 'bg-orange-500'],
         ['numpy', 'bg-blue-500'],
         ['pandas', 'bg-yellow-500'],
+        ['PyTorch', 'bg-red-500'],
     ],
     'Other': [
         ['qt', 'bg-green-500'],
@@ -87,6 +88,30 @@ const projects = [
         github: 'https://github.com/CoderN-P/Country-Bot',
     },
     {
+        name: 'Raspberry Pi Smart Irrigation System',
+        description: 'This project uses a Raspberry Pi to control a water pump to automatically water your plants. The system uses a soil moisture sensor to detect when the plants need water and accordingly waters the plants. The system can be controlled through a web interface.',
+        madeWith: ['python', 'raspberry pi', 'flask', 'html', 'css', 'javascript'],
+        shortDescription: 'Automated watering system',
+        colors: 'from-green-500 to-teal-500',
+        github: 'https://github.com/CoderN-P/Science-Fair-2021-Project',
+    },
+    {
+        name: "AI Stocks",
+        description: 'AI Stocks is a stock prediction tool that uses machine learning to predict stock prices. The tool uses historical stock data to train a model and predict future stock prices. The tool uses the Yahoo Finance API to get stock data and runs machine learning models using the TensorFlow library.',
+        madeWith: ['python', 'tensorflow', 'numpy'],
+        colors: 'from-gray-500 to-stone-500',
+        shortDescription: 'Stock prediction tool',
+        github: 'https://github.com/CoderN-P/AI-Stocks'
+    },
+    {
+        name: 'Neural Network',
+        description: 'This project is a simple neural network implementation in Python. The neural network is trained on the MNIST dataset and can recognize handwritten digits. The neural network uses the numpy library for matrix operations.',
+        madeWith: ['python', 'numpy'],
+        colors: 'from-blue-500 to-red-500',
+        shortDescription: 'Simple neural network implementation from scratch',
+        github: 'https://github.com/CoderN-P/NeuralNetwork'
+    },
+    {
         name: 'Pycolor',
         shortDescription: 'Colors made simple',
         madeWith: ['python'],
@@ -94,6 +119,14 @@ const projects = [
         description: 'Pycolor is a Python library that provides easy access to color codes and names. It is a simple wrapper around thecolorapi.com',
         github: 'https://github.com/CoderN-P/Pycolor',
         link: 'https://pypi.org/project/pycolor-codern/'
+    },
+    {
+        name: 'WorldInfo',
+        shortDescription: 'Get information about any country',
+        madeWith: ['python', 'flask', 'html', 'tailwindcss', 'javascript'],
+        colors: 'from-blue-500 to-red-500',
+        description: 'WorldInfo is a web app that provides information about any country. Users can search for a country and get information such as population, area, and more. This was my first hackathon project, submitted to GunHacks 8.0',
+        github: 'https://github.com/CoderN-P/WorldInfo',
     }
 ]
 const skillToIcon = {
@@ -125,6 +158,7 @@ const skillToIcon = {
     'arduino': '/static/images/arduino.svg',
     'raspberry pi': '/static/images/raspberry-pi.svg',
     'git': '/static/images/git.svg',
+    'PyTorch': '/static/images/pytorch-icon.svg',
 }
 $(document).ready(function () {
     const pathname = $(location).attr("pathname");
