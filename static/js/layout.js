@@ -70,6 +70,7 @@ const projects = [
         colors: 'from-gray-600 to-blue-500',
         shortDescription: 'A simple but modern chatting application',
         github: 'https://github.com/CoderN-P/NextChat',
+        link: 'https://nextchat.neelp.tech/'
     },
     {
         name: 'Curve Path Simulator',
