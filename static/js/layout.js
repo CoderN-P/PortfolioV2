@@ -66,7 +66,7 @@ const projects = [
     {
         name: 'SvelteEditor',
         description: 'SvelteEditor is a simple code editor built using svelte and highlight.js.',
-        madeWith: ['svelte', 'typescript', 'tailwindcss', 'css'],
+        madeWith: ['svelte', 'typescript', 'tailwindcss', 'css', 'javascript', 'html'],
         colors: 'from-gray-500 to-red-500',
         shortDescription: 'A simple code editor built with svelte',
         github: 'https://github.com/CoderN-P/SvelteEditor',
@@ -75,7 +75,7 @@ const projects = [
     {
         name: 'NextChat',
         description: 'NextChat is a chat application that uses the Next.js framework and Socket.io to provide real-time messaging. Users can create chats and invite members through a share code. The app uses MongoDB to store user data and tailwindcss for styling.',
-        madeWith: ['typescript', 'next.js', 'socket.io', 'tailwindcss', 'mongodb', 'node.js'],
+        madeWith: ['typescript', 'next.js', 'socket.io', 'tailwindcss', 'mongodb', 'node.js', 'react'],
         colors: 'from-gray-600 to-blue-500',
         shortDescription: 'A simple but modern chatting application',
         github: 'https://github.com/CoderN-P/NextChat',
