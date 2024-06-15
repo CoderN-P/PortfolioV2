@@ -73,6 +73,14 @@ const projects = [
         link: 'https://npmjs.com/package/editor-for-svelte',
     },
     {
+        name: 'ProjectNebulus',
+        shortDescription: "[ARCHIVED] A solution for all your learning needs",
+        description: 'Nebulus consolidates all of your learning sites into one easy to use tool. It features a chat in which you can communicate, a study session timer, and many other useful tools.',
+        madeWith: ['flask', 'python', 'html', 'css', 'javascript', 'mongodb', 'jquery', 'tailwindcss'],
+        colors: 'from-orange-500 to-purple-500',
+        github: 'https://github.com/ProjectNebulus/ProjectNebulus/',
+    },
+    {
         name: 'NextChat',
         description: 'NextChat is a chat application that uses the Next.js framework and Socket.io to provide real-time messaging. Users can create chats and invite members through a share code. The app uses MongoDB to store user data and tailwindcss for styling.',
         madeWith: ['typescript', 'next.js', 'socket.io', 'tailwindcss', 'mongodb', 'node.js', 'react'],
