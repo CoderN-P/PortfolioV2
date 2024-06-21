@@ -46,15 +46,6 @@ const skills = {
 }
 const projects = [
     {
-        name: 'Research Tool',
-        description: 'ResearchTool uses the power of web scraping and AI to speed up the process of researching. Just enter a prompt and ResearchTool will find the most relevant information for you.',
-        madeWith: ['typescript', 'svelte', 'flask', 'python', 'tailwindcss'],
-        colors: 'from-blue-500 to-orange-500',
-        shortDescription: 'Research Faster with AI',
-        github: 'https://github.com/CoderN-P/ResearchTool',
-        link: 'https://researchtool.netlify.app/',
-    },
-    {
         name: 'Stellar',
         description: 'Stellar uses advanced AI to presonalize your learning experience. Through personalized questions and lessons, interactive projects, and more, Stellar makes your learning experience just so much better.',
         madeWith: ['svelte', 'typescript', 'tailwindcss', 'flask', 'python', 'mongodb'],
@@ -62,6 +53,24 @@ const projects = [
         shortDescription: 'All your favorite learning tools, now in 1 app',
         github: 'https://github.com/Stellarlearning/Stellar',
         link: 'https://stellarlearning.app/'
+    },
+    {
+        name: "EventSync",
+        description: "EventSync makes it easy to plan gatherings, get-togethers or even simple hangouts with your friends. No more confusion and no more getting ghosted by the group chat.",
+        madeWith: ['react', 'next.js', 'typescript', 'tailwindcss', 'html', 'node.js', 'mongodb'],
+        shortDescription: 'Plan events with ease',
+        colors: 'from-blue-500 to-green-500',
+        github: 'https://github.com/ProjectEvents/EventSync',
+        link: 'https://beta.eventsync.app/'
+    },
+    {
+        name: 'Research Tool',
+        description: 'ResearchTool uses the power of web scraping and AI to speed up the process of researching. Just enter a prompt and ResearchTool will find the most relevant information for you.',
+        madeWith: ['typescript', 'svelte', 'flask', 'python', 'tailwindcss'],
+        colors: 'from-blue-500 to-orange-500',
+        shortDescription: 'Research Faster with AI',
+        github: 'https://github.com/CoderN-P/ResearchTool',
+        link: 'https://researchtool.netlify.app/',
     },
     {
         name: 'SvelteEditor',
