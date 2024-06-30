@@ -82,6 +82,14 @@ const projects = [
         link: 'https://npmjs.com/package/editor-for-svelte',
     },
     {
+        name: 'TrekTracker',
+        description: "TrekTracker is a simple ios app that uses MapKit and HealthKit to track steps and simple workouts. (It's not that great, but it was my first ios app)",
+        madeWith: ['swift'],
+        colors: 'from-green-500 to-green-700',
+        shortDescription: 'Simple ios app to track steps and workouts',
+        github: "https://github.com/CoderN-P/TrekTracker",
+    },
+    {
         name: 'ProjectNebulus',
         shortDescription: "[ARCHIVED] A solution for all your learning needs",
         description: 'Nebulus consolidates all of your learning sites into one easy to use tool. It features a chat in which you can communicate, a study session timer, and many other useful tools.',
