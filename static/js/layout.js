@@ -23,6 +23,7 @@ const skills = {
         ['graphql', 'bg-pink-500'],
         ['docker', 'bg-blue-500'],
         ['next.js', 'bg-gray-600'],
+        ['FastAPI', 'bg-green-500'],
 
     ],
     'Frontend Tools/Frameworks': [
@@ -64,13 +65,21 @@ const projects = [
         link: 'https://beta.eventsync.app/'
     },
     {
+        name: 'Foodlyze',
+        description: 'Foodlyze is a web app that scans food product barcodes and provides nutritional information, a health score, and a summary. The app uses openfoodfacts, ZXing, and GPT-4o-mini to provide the information. Foodlyze was submitted to the 2025 BISV Hacks hackathon.',
+        madeWith: ['svelte', 'typescript', 'tailwindcss', 'python', 'FastAPI' ],
+        colors: 'from-green-500 to-blue-500',
+        shortDescription: 'Scan food barcodes for nutritional information',
+        github: 'https://github.com/CoderN-P/BISV-Hacks',
+        link: 'https://foodlyze.neelp.tech/',
+    },
+    {
         name: 'Research Tool',
         description: 'ResearchTool uses the power of web scraping and AI to speed up the process of researching. Just enter a prompt and ResearchTool will find the most relevant information for you.',
         madeWith: ['typescript', 'svelte', 'flask', 'python', 'tailwindcss'],
         colors: 'from-blue-500 to-orange-500',
         shortDescription: 'Research Faster with AI',
         github: 'https://github.com/CoderN-P/ResearchTool',
-        link: 'https://researchtool.netlify.app/',
     },
     {
         name: 'SvelteEditor',
@@ -187,6 +196,7 @@ const skillToIcon = {
     'sqlite': '/static/images/sqlite.svg',
     'jquery': '/static/images/jquery.svg',
     'swift': '/static/images/swift.svg',
+    'FastAPI': '/static/images/fastapi.svg',
     'tensorflow': '/static/images/tensorflow.svg',
     'numpy': '/static/images/numpy.svg',
     'pandas': '/static/images/pandas.svg',
