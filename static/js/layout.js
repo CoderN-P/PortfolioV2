@@ -43,17 +43,26 @@ const skills = {
         ['git', 'bg-red-500'],
         ['arduino', 'bg-blue-500'],
         ['raspberry pi', 'bg-red-500'],
+        ['wpilib', 'bg-blue-500'],
     ],
 }
 const projects = [
     {
         name: 'Stellar',
-        description: 'Stellar uses advanced AI to presonalize your learning experience. Through personalized questions and lessons, interactive projects, and more, Stellar makes your learning experience just so much better.',
+        description: 'Stellar uses advanced AI to personalize your learning experience. Through personalized questions and lessons, interactive projects, and more, Stellar makes your learning experience just so much better.',
         madeWith: ['svelte', 'typescript', 'tailwindcss', 'flask', 'python', 'mongodb'],
         colors: 'from-blue-500 to-purple-500',
         shortDescription: 'All your favorite learning tools, now in 1 app',
         github: 'https://github.com/Stellarlearning/Stellar',
         link: 'https://stellarlearning.app/'
+    },
+    {
+        name: 'GPT-Kitbot',
+        description: 'GPT-Kitbot is a modified version of the FRC kitbot that includes a web dashboard and backend for AI control. The project uses local LLMs and socketio to provide natural language control of the robot. ',
+        madeWith: ['python', 'flask', 'svelte', 'html', 'typescript', 'java', 'tailwindcss', 'socket.io', 'wpilib'],
+        colors: 'from-blue-500 to-purple-500',
+        shortDescription: 'Natural language control for FRC robots',
+        github: 'https://github.com/CoderN-P/GPT-Kitbot',
     },
     {
         name: "EventSync",
@@ -204,6 +213,7 @@ const skillToIcon = {
     'raspberry pi': '/static/images/raspberry-pi.svg',
     'git': '/static/images/git.svg',
     'PyTorch': '/static/images/pytorch-icon.svg',
+    'WPIlib': '/static/images/wpilib.png',
 }
 $(document).ready(function () {
     const pathname = $(location).attr("pathname");
